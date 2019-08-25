@@ -38,8 +38,9 @@ class MyFrame(wx.Frame):
                       nombre = nombre + 1
                     if nombre > 0:
                         wiki = wikipedia.summary(question, sentences=2)
+                        wiki2 = wikipedia.summary(question)
 
-                        print(wiki)
+                        print(wiki2)
                         engine = pyttsx3.init()
                         engine.say(wiki)
                         engine.runAndWait()
